@@ -129,7 +129,7 @@ function makeErrorMsg(errorObj) {
 // -------------- //
 
 function initializeApp() {
-    liff.init(() => initializeLiff(), error => uiStatusError(makeErrorMsg(error), false));
+    liff.init({liffId:"https://static.line-scdn.net/liff/edge/2.1/sdk.js",() => initializeLiff(), error => uiStatusError(makeErrorMsg(error), false));
 }
 
 function initializeLiff() {
